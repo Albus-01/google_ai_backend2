@@ -1,0 +1,8 @@
+pdfplumber
+pinecone
+requests
+python-dotenv
+google-generativeai
+fastapi
+uvicorn[standard]
+python-multipart
