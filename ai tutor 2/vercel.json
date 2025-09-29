@@ -7,7 +7,7 @@
       "config": {
         "maxLambdaSize": "15mb",
         "runtime": "python3.9",
-        "maxDuration": 30
+        "maxDuration": 60
       }
     }
   ],
@@ -17,4 +17,5 @@
       "dest": "api.py"
     }
   ]
+
 }
