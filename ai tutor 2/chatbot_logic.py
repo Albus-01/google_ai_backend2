@@ -40,8 +40,7 @@ class Chatbot:
         
         # Create a detailed prompt for the generative model
         prompt = f"""
-        Based *only* on the following context from a document, please provide a clear and concise answer to the user's question.
-        Output the context if the score is high as 0.9 and then you get and then two lines below use that context and use external knowledge to output a precise answer.Output a solution always(only context info is optional)
+        Use the provided context if it is useful to give precise accurate answer to the prompt.
         
         --- CONTEXT ---
         {combined_context}
@@ -61,4 +60,5 @@ class Chatbot:
         except Exception as e:
             print(f"    Error during answer generation: {e}")
             return "I encountered an error while trying to formulate an answer. The API may be unavailable or the content might be blocked."
+
 
