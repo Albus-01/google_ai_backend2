@@ -32,8 +32,6 @@ class Chatbot:
         print("  - Retrieving relevant context from the document...")
         context_chunks = self._get_relevant_context(question)
         
-        if not context_chunks:
-            return "I'm sorry, I couldn't find any relevant information in the document to answer that question."
 
         # Combine the retrieved text chunks into a single block of context
         combined_context = "\n\n".join([chunk['text'] for chunk in context_chunks])
@@ -60,5 +58,6 @@ class Chatbot:
         except Exception as e:
             print(f"    Error during answer generation: {e}")
             return "I encountered an error while trying to formulate an answer. The API may be unavailable or the content might be blocked."
+
 
 
